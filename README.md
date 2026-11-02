@@ -24,13 +24,6 @@ All personal details, URLs, and endpoints are configurable via environment varia
    ```
 2. Adjust your values in `.env.local`:
    ```env
-   NEXT_PUBLIC_PERSONAL_NAME="Udeze Ernest"
-   NEXT_PUBLIC_PERSONAL_EMAIL="ernestez12@gmail.com"
-   NEXT_PUBLIC_GITHUB_URL="https://github.com/nexta12"
-   NEXT_PUBLIC_LINKEDIN_URL="https://linkedin.com/in/udeze-ernest"
-   NEXT_PUBLIC_TWITTER_URL="https://x.com/nexta12"
-   NEXT_PUBLIC_SPIDER_API_URL="https://api.spiderweb.com.ng"
-   ```
 
 ## 📦 Getting Started
 
