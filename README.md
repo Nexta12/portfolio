@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Udeze Ernest — Senior Software Engineer & Founder
 
-## Getting Started
+> Production portfolio showcasing distributed systems architecture, edge computing platforms, and high-concurrency software engineering.
 
-First, run the development server:
+## 🚀 Featured Products
+
+- **Spider**: High-Volume B2B / B2C Lead Generation & Outreach Engine (Electron + React desktop crawler, better-sqlite3 WAL persistence, real-time DNS MX validation).
+- **Z-Remote**: Sophisticated Enterprise RMM built for MSPs (real-time telemetry matrix, sub-38ms remote shell, automated patch rollouts).
+- **PrepFocus**: Advanced hybrid exam preparation platform with adaptive scoring algorithms.
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (Turbopack, App Router)
+- **UI & State**: React 19, Tailwind CSS v4, Lucide React
+- **Design**: Glassmorphism, Dark Mode, Interactive Terminal, Dynamic Ambient Glow
+
+## ⚙️ Environment Configuration
+
+All personal details, URLs, and endpoints are configurable via environment variables and will never be committed to Git.
+
+1. Copy the example environment template:
+   ```bash
+   cp .env.example .env.local
+   ```
+2. Adjust your values in `.env.local`:
+   ```env
+   NEXT_PUBLIC_PERSONAL_NAME="Udeze Ernest"
+   NEXT_PUBLIC_PERSONAL_EMAIL="ernestez12@gmail.com"
+   NEXT_PUBLIC_GITHUB_URL="https://github.com/nexta12"
+   NEXT_PUBLIC_LINKEDIN_URL="https://linkedin.com/in/udeze-ernest"
+   NEXT_PUBLIC_TWITTER_URL="https://x.com/nexta12"
+   NEXT_PUBLIC_SPIDER_API_URL="https://api.spiderweb.com.ng"
+   ```
+
+## 📦 Getting Started
+
+Install dependencies and start the local development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To test and compile the production build:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT &copy; Udeze Ernest
