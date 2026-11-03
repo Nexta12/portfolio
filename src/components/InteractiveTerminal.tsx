@@ -16,9 +16,7 @@ export default function InteractiveTerminal() {
       command: "welcome",
       output: (
         <div className="space-y-1 text-zinc-300">
-          <p className="text-blue-400 font-bold">
-            Udeze Ernest [v8.4.2-senior-dist] — Interactive Engineering Shell
-          </p>
+         
           <p className="text-zinc-400">
             Type <span className="text-emerald-400 font-semibold">help</span> to list commands or click suggested chips below.
           </p>
@@ -47,11 +45,10 @@ export default function InteractiveTerminal() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 pl-2">
               <div><span className="text-emerald-400 font-semibold">about</span> — Bio & core value proposition</div>
               <div><span className="text-emerald-400 font-semibold">projects</span> — Flagship production systems (Spider, Z-Remote, PrepFocus)</div>
-              <div><span className="text-emerald-400 font-semibold">skills</span> — Technical arsenal & proficiencies</div>
-              <div><span className="text-emerald-400 font-semibold">benchmarks</span> — Production metrics & latency stats</div>
-              <div><span className="text-emerald-400 font-semibold">architecture</span> — Engineering principles</div>
-              <div><span className="text-emerald-400 font-semibold">contact</span> — Reach out / schedule intro</div>
-              <div><span className="text-emerald-400 font-semibold">sudo hire</span> — Senior qualification verdict</div>
+              <div><span className="text-emerald-400 font-semibold">skills</span> — Technical abilities & proficiencies</div>
+            
+              <div><span className="text-emerald-400 font-semibold">Principles</span> — Engineering principles</div>
+              <div><span className="text-emerald-400 font-semibold">contact</span> — Reach out</div>
               <div><span className="text-emerald-400 font-semibold">clear</span> — Reset terminal output</div>
             </div>
           </div>
@@ -103,21 +100,7 @@ export default function InteractiveTerminal() {
         );
         break;
 
-      case "benchmarks":
-        output = (
-          <div className="space-y-1.5 text-zinc-300">
-            <p className="text-emerald-400 font-semibold text-xs">[LIVE BENCHMARK AUDIT]:</p>
-            <div className="font-mono text-xs space-y-1">
-              <div>• Peak Ingestion: 120,000 req/sec (Kafka + Go workers)</div>
-              <div>• p99 Ingestion Latency: 14.2ms (Zero disk bottlenecks)</div>
-              <div>• Edge Cold Start: &lt; 2.5ms (WASM on Cloudflare Workers)</div>
-              <div>• Frontend Core Vitals: FCP 0.4s, LCP 0.7s, CLS 0.00 (Lighthouse 100/100)</div>
-              <div>• Production Availability: 99.99% multi-region uptime</div>
-            </div>
-          </div>
-        );
-        break;
-
+    
       case "architecture":
         output = (
           <div className="space-y-1.5 text-zinc-300">
@@ -143,22 +126,7 @@ export default function InteractiveTerminal() {
         );
         break;
 
-      case "sudo hire":
-        output = (
-          <div className="rounded-lg border border-emerald-500/40 bg-emerald-950/20 p-3 space-y-1 text-emerald-300">
-            <p className="font-bold flex items-center gap-1.5">
-              <Sparkles className="h-4 w-4" />
-              [VERDICT: 100% SENIOR LEADERSHIP MATCH]
-            </p>
-            <p className="text-xs text-zinc-300">
-              System architect capabilities confirmed. High-leverage engineer equipped to lead distributed migrations, unblock technical roadblocks, and mentor junior/mid engineers.
-            </p>
-            <p className="text-xs font-mono text-emerald-400 mt-1">
-              &gt; Ready to start. Email: {portfolioData.personal.email}
-            </p>
-          </div>
-        );
-        break;
+   
 
       case "clear":
         setHistory([]);
@@ -182,7 +150,7 @@ export default function InteractiveTerminal() {
     executeCommand(input);
   };
 
-  const suggestions = ["projects", "about", "skills", "benchmarks", "architecture", "sudo hire", "contact"];
+  const suggestions = ["projects", "about", "skills", "benchmarks", "architecture", "contact"];
 
   return (
     <section id="terminal" className="py-20 relative border-t border-white/10">

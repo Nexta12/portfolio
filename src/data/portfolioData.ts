@@ -67,7 +67,7 @@ export const portfolioData = {
     {
       id: "spider",
       title: "Spider",
-      badge: "High-Volume B2B / B2C Lead Generation & Outreach Engine",
+      badge: "High-Volume B2B / B2C Lead Generation machine",
       tagline: "Hybrid Client-Centric / Edge-Scraping Desktop Architecture eliminating cloud crawler overhead with offline-first SQLite persistence and real-time MX verification.",
       image: "/images/spider.png",
       problem:
