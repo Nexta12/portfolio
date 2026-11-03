@@ -109,20 +109,7 @@ export default function Hero() {
             </div>
 
             {/* Lean Key Stats */}
-            <div className="grid grid-cols-3 gap-3 w-full max-w-lg pt-6 border-t border-white/10 text-center lg:text-left">
-              <div>
-                <p className="text-xl sm:text-2xl font-bold font-mono text-white">8+ Yrs</p>
-                <p className="text-[11px] text-zinc-400 font-mono uppercase tracking-wider">Engineering</p>
-              </div>
-              <div>
-                <p className="text-xl sm:text-2xl font-bold font-mono text-blue-400">120k</p>
-                <p className="text-[11px] text-zinc-400 font-mono uppercase tracking-wider">Req / Sec</p>
-              </div>
-              <div>
-                <p className="text-xl sm:text-2xl font-bold font-mono text-emerald-400">3 Products</p>
-                <p className="text-[11px] text-zinc-400 font-mono uppercase tracking-wider">Built & Scaled</p>
-              </div>
-            </div>
+           
           </div>
 
         </div>

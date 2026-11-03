@@ -13,6 +13,7 @@ export default function CaseStudies() {
 
   return (
     <section id="case-studies" className=" pb-24 relative border-t border-white/10">
+
       <div className="mx-auto max-w-7xl px-14">
         {/* Section Header */}
 
@@ -48,9 +49,7 @@ export default function CaseStudies() {
                 </div>
 
                 <div className="flex-1 min-w-0">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-blue-400 block mb-0.5">
-                    0{idx + 1} &bull; {project.badge.split(" ")[0]}
-                  </span>
+                
                   <h3 className="font-semibold text-white text-sm mb-1 truncate">
                     {project.title.split(":")[0]}
                   </h3>
@@ -63,28 +62,17 @@ export default function CaseStudies() {
           })}
         </div>
 
+
+
+
         {/* Selected Project Full Details Showcase */}
-        <div className="rounded-3xl border border-white/10 bg-zinc-900/50 backdrop-blur-xl p-6 sm:p-8 lg:p-10 shadow-2xl">
+        <div className="rounded-xl border border-white/10 bg-zinc-900/50 backdrop-blur-xl p-6 sm:p-8 lg:p-10 shadow-2xl">
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left Column: Context, Problem & Solution */}
             <div className="lg:col-span-5 space-y-6">
               <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="inline-block rounded-full bg-blue-500/15 border border-blue-500/30 px-3 py-1 text-xs font-mono text-blue-300">
-                    {currentProject.badge}
-                  </span>
-                  {currentProject.liveUrl && (
-                    <a
-                      href={currentProject.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-[11px] font-mono text-emerald-400 hover:text-emerald-300 transition-colors"
-                    >
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                      <span>Live Production</span>
-                    </a>
-                  )}
-                </div>
+               
 
                 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
                   {currentProject.title}
@@ -99,7 +87,7 @@ export default function CaseStudies() {
                 <div>
                   <h4 className="text-xs font-mono uppercase tracking-wider text-rose-400 font-semibold mb-1.5 flex items-center gap-1.5">
                     <Activity className="h-3.5 w-3.5" />
-                    The Architectural Challenge
+                    The Challenge
                   </h4>
                   <p className="text-xs text-zinc-300 leading-relaxed">
                     {currentProject.problem}
@@ -114,21 +102,6 @@ export default function CaseStudies() {
                     {currentProject.solution}
                   </p>
                 </div>
-              </div>
-
-              {/* Impact Metrics Badges */}
-              <div className="grid grid-cols-3 gap-3">
-                {currentProject.metrics.map((m, idx) => (
-                  <div
-                    key={idx}
-                    className="flex flex-col p-3 rounded-xl border border-white/5 bg-white/[0.02]"
-                  >
-                    <span className="text-xs text-zinc-400 font-mono">{m.label}</span>
-                    <span className="text-sm sm:text-base font-bold text-white font-mono mt-0.5 text-blue-300">
-                      {m.value}
-                    </span>
-                  </div>
-                ))}
               </div>
 
               {/* Tags & Action Links */}
@@ -185,7 +158,7 @@ export default function CaseStudies() {
                     }`}
                   >
                     <Monitor className="h-3.5 w-3.5" />
-                    <span>Live UI & Dashboard</span>
+                    <span>Live Dashboard</span>
                   </button>
 
                   <button
@@ -200,19 +173,6 @@ export default function CaseStudies() {
                     <span>System Architecture</span>
                   </button>
 
-                  {currentProject.codeSnippet && (
-                    <button
-                      onClick={() => setActiveTab("code")}
-                      className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-all cursor-pointer ${
-                        activeTab === "code"
-                          ? "bg-blue-500/20 text-blue-300 border border-blue-500/30 shadow-sm"
-                          : "text-zinc-400 hover:text-white"
-                      }`}
-                    >
-                      <Code2 className="h-3.5 w-3.5" />
-                      <span>Production Code</span>
-                    </button>
-                  )}
                 </div>
 
                 <div className="text-[11px] font-mono text-zinc-500 hidden sm:flex items-center gap-2">
@@ -311,24 +271,14 @@ export default function CaseStudies() {
                 </div>
               )}
 
-              {/* Tab 3: Production Code */}
-              {activeTab === "code" && (
-                <div className="flex-1 rounded-2xl border border-white/10 bg-black/70 p-4 font-mono text-xs overflow-x-auto text-zinc-300">
-                  <div className="flex items-center gap-2 pb-3 mb-3 border-b border-white/10 text-zinc-500 text-[11px]">
-                    <span className="h-2.5 w-2.5 rounded-full bg-rose-500/80" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
-                    <span className="ml-2 text-zinc-400 font-semibold">{currentProject.codeSnippet?.filename}</span>
-                  </div>
-                  <pre className="text-zinc-300 leading-relaxed font-mono overflow-x-auto">
-                    <code>{currentProject.codeSnippet?.code}</code>
-                  </pre>
-                </div>
-              )}
+             
             </div>
           </div>
+
         </div>
+
       </div>
+
     </section>
   );
 }
